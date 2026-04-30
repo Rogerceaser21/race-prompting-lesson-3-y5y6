@@ -944,6 +944,14 @@ html, body {
   color: var(--text-primary);
 }
 
+/* Slide 3 — vary star-card heading colours per tier */
+.slide[data-slide="3"] .star-card.s1 .level-label,
+.slide[data-slide="3"] .star-card.s1 .level-label .star-cyan { color: var(--cyan)    !important; }
+.slide[data-slide="3"] .star-card.s2 .level-label,
+.slide[data-slide="3"] .star-card.s2 .level-label .star-cyan { color: var(--gold)    !important; }
+.slide[data-slide="3"] .star-card.s3 .level-label,
+.slide[data-slide="3"] .star-card.s3 .level-label .star-cyan { color: var(--magenta) !important; }
+
 /* Slide 5 — vary R/A/C/E heading colours (recap card grid) */
 .slide[data-slide="5"] .vocab-grid > .vocab-item:nth-child(1) .vocab-term { color: var(--cyan)    !important; }
 .slide[data-slide="5"] .vocab-grid > .vocab-item:nth-child(2) .vocab-term { color: var(--magenta) !important; }
