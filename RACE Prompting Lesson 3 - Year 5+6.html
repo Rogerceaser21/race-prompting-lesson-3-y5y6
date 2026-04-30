@@ -921,6 +921,44 @@ html, body {
   transform: translateY(0);
   pointer-events: auto;
 }
+
+/* ============================================================
+   READABILITY OVERRIDES — slides 3 through 10
+   Body / description text was rendering in --text-dim (#3a4a6a)
+   which is barely legible on the dark navy background. Force
+   white for student-facing body content on these slides.
+   Headings on slides 5 + 6 vary across cyan/magenta/blue/gold
+   so the R/A/C/E labels pop and create visual rhythm.
+   ============================================================ */
+.slide[data-slide="3"]  .star-card .level-desc,
+.slide[data-slide="4"]  .card .body-text,
+.slide[data-slide="5"]  .vocab-def,
+.slide[data-slide="6"]  .race-card-q,
+.slide[data-slide="6"]  .race-card-eg,
+.slide[data-slide="7"]  .vocab-def,
+.slide[data-slide="8"]  .vocab-def,
+.slide[data-slide="9"]  .race-row-q,
+.slide[data-slide="10"] .body-text,
+.slide[data-slide="10"] .bullet-list li,
+.slide[data-slide="10"] .prompt-block {
+  color: var(--text-primary);
+}
+
+/* Slide 5 — vary R/A/C/E heading colours (recap card grid) */
+.slide[data-slide="5"] .vocab-grid > .vocab-item:nth-child(1) .vocab-term { color: var(--cyan)    !important; }
+.slide[data-slide="5"] .vocab-grid > .vocab-item:nth-child(2) .vocab-term { color: var(--magenta) !important; }
+.slide[data-slide="5"] .vocab-grid > .vocab-item:nth-child(3) .vocab-term { color: var(--blue)    !important; }
+.slide[data-slide="5"] .vocab-grid > .vocab-item:nth-child(4) .vocab-term { color: var(--gold)    !important; }
+
+/* Slide 6 — vary R/A/C/E card heading colours (full framework cards) */
+.slide[data-slide="6"] .race-card.r .race-card-letter,
+.slide[data-slide="6"] .race-card.r .race-card-word { color: var(--cyan); }
+.slide[data-slide="6"] .race-card.a .race-card-letter,
+.slide[data-slide="6"] .race-card.a .race-card-word { color: var(--magenta); }
+.slide[data-slide="6"] .race-card.c .race-card-letter,
+.slide[data-slide="6"] .race-card.c .race-card-word { color: var(--blue); }
+.slide[data-slide="6"] .race-card.e .race-card-letter,
+.slide[data-slide="6"] .race-card.e .race-card-word { color: var(--gold); }
 </style>
 </head>
 <body>
